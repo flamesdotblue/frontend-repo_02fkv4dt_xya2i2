@@ -37,14 +37,14 @@ WSL2 gives you a full Linux environment on Windows with near-native performance.
 ## Install WSL2
 1. Open PowerShell as Administrator and run:
 
-```powershell
+\```powershell
 wsl --install
-```
+\```
 
 2. Restart your PC when prompted. On first launch, choose a Linux distro (Ubuntu recommended) and create a username/password.
 
 ## Essentials inside WSL (Ubuntu)
-```bash
+\```bash
 # Update packages
 sudo apt update && sudo apt upgrade -y
 
@@ -58,7 +58,7 @@ nvm install --lts
 
 # Install Python and pip
 sudo apt install -y python3 python3-pip
-```
+\```
 
 ## VS Code integration
 - Install "Remote - WSL" extension
@@ -77,17 +77,17 @@ sudo apt install -y python3 python3-pip
 Most distributions will work. Commands below are for Debian/Ubuntu; adapt for your distro.
 
 ## System packages
-```bash
+\```bash
 sudo apt update && sudo apt upgrade -y
 sudo apt install -y git curl build-essential python3 python3-pip
-```
+\```
 
 ## Node.js via nvm
-```bash
+\```bash
 curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.7/install.sh | bash
 source ~/.bashrc
 nvm install --lts
-```
+\```
 
 ## Helpful tools
 - ripgrep (fast search)
@@ -106,13 +106,13 @@ nvm install --lts
         title: 'Initialize Frontend',
         content: `# Initialize a Frontend (Vite + React)
 
-```bash
+\```bash
 # Create app
 npm create vite@latest my-app -- --template react
 cd my-app
 npm install
 npm run dev
-```
+\```
 
 ## Project hygiene
 - Use a component-per-file structure
@@ -167,17 +167,17 @@ npm run dev
         title: 'Initialize Backend',
         content: `# Initialize a Backend (FastAPI)
 
-```bash
+\```bash
 python3 -m venv .venv
 source .venv/bin/activate
 pip install fastapi uvicorn
-```
+\```
 
 Create a main file and run:
 
-```bash
+\```bash
 uvicorn main:app --reload --port 8000
-```
+\```
 
 ## Structure
 - Separate routers by domain
@@ -200,14 +200,14 @@ uvicorn main:app --reload --port 8000
 - Validate all inputs at the edge
 
 ## Example schema (SQL)
-```sql
+\```sql
 CREATE TABLE users (
   id uuid PRIMARY KEY,
   email text UNIQUE NOT NULL,
   password_hash text NOT NULL,
   created_at timestamptz DEFAULT now()
 );
-```
+\```
 `
       }
     ]
